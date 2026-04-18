@@ -1,1 +1,873 @@
-# lhtyz.github.io
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Angel North London Forever | Rhetorical Analysis</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+
+:root {
+  --navy:   #0f1f3d;
+  --brick:  #b03a2e;
+  --cream:  #f5f0e8;
+  --sand:   #e8dfc8;
+  --mid:    #8a8070;
+  --white:  #ffffff;
+  --ink:    #1c1a18;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+}
+
+/* --- SHARED --- */
+.slide {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  page-break-after: always;
+}
+
+.slide-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 5rem 4rem;
+  width: 100%;
+}
+
+.label {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--brick);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.page-num {
+  position: absolute;
+  bottom: 2rem;
+  right: 3rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--mid);
+  text-transform: uppercase;
+}
+
+/* --- FULLSCREEN COVER (SLIDE 1) --- */
+.cover-fullscreen {
+  padding: 0;
+}
+.cover-background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.cover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.4) 100%);
+  z-index: 1;
+}
+.cover-content {
+  position: relative;
+  z-index: 2;
+  padding: 5rem 4rem;
+  max-width: 800px;
+  color: var(--white);
+}
+.cover-content .cover-song-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(3.5rem, 8vw, 6rem);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+.cover-content .cover-song-sub {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+.cover-content .cover-artist {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 2.5rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+.cover-content .cover-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.cover-content .cover-link-item {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.7);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+.cover-content .cover-link-item a {
+  color: var(--white);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* --- TABLE OF CONTENTS SLIDE --- */
+#s1-toc {
+  background: var(--cream);
+}
+#s1-toc .cover-nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+#s1-toc .cover-nav-list li {
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+#s1-toc .cover-nav-list li:first-child {
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+#s1-toc .cover-nav-list li a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 0;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: color 0.15s;
+}
+#s1-toc .cover-nav-list li a:hover { color: var(--brick); }
+#s1-toc .cover-nav-list li a .arrow { opacity: 0.4; }
+
+/* --- SLIDE 2: BACKGROUND / SOAPSTONE --- */
+#s2 { background: var(--cream); }
+.soap-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2.5rem;
+}
+.soap-table tr {
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.soap-table tr:first-child {
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+.soap-letter-cell {
+  width: 3.5rem;
+  text-align: center;
+  vertical-align: top;
+  padding: 1.5rem 1rem 1.5rem 0;
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.6rem;
+  color: var(--brick);
+}
+.soap-answer-cell {
+  padding: 1.5rem 1rem;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--ink);
+  vertical-align: top;
+}
+.soap-answer-cell strong {
+  display: block;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin-bottom: 0.4rem;
+}
+.section-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(2.5rem,5vw,4rem);
+  line-height: 0.95;
+  color: var(--navy);
+  margin-bottom: 0.25rem;
+}
+
+/* --- SLIDE 3: THESIS --- */
+#s3 {
+  background: var(--navy);
+  color: var(--white);
+}
+.thesis-box {
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 3rem 3.5rem;
+  margin-top: 2.5rem;
+}
+.thesis-text {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  line-height: 1.8;
+  color: var(--white);
+}
+.thesis-em {
+  color: #e8a070;
+}
+
+/* --- SLIDES 4-7: APPEAL PAGES --- */
+.appeal-slide { background: var(--sand); }
+.appeal-slide.dark { background: #1c1a18; color: var(--white); }
+
+.appeal-header {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  border-bottom: 2px solid var(--brick);
+  padding-bottom: 1.5rem;
+}
+.appeal-big-letter {
+  font-family: 'DM Serif Display', serif;
+  font-size: 5rem;
+  line-height: 1;
+  color: var(--brick);
+}
+.appeal-title-block h2 {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin-bottom: 0.3rem;
+}
+.appeal-title-block h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.2rem;
+  line-height: 1;
+  color: var(--navy);
+}
+.appeal-slide.dark .appeal-title-block h1 { color: var(--white); }
+
+.examples-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.example-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+.appeal-slide.dark .example-row {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.ex-num {
+  grid-column: 1 / -1;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--mid);
+  padding: 1.25rem 0 0.5rem;
+}
+.ex-lyric {
+  padding: 0 1.5rem 1.5rem 0;
+  border-right: 1px solid rgba(0,0,0,0.08);
+}
+.appeal-slide.dark .ex-lyric {
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+.ex-lyric blockquote {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--brick);
+  border-left: 2px solid var(--brick);
+  padding-left: 1rem;
+}
+.ex-analysis {
+  padding: 0 0 1.5rem 1.5rem;
+}
+.ex-analysis p {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--ink);
+}
+.appeal-slide.dark .ex-analysis p { color: rgba(255,255,255,0.75); }
+.ex-analysis .alabel {
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+/* --- VIDEO TIMESTAMP badge --- */
+.timestamp {
+  display: inline-block;
+  background: var(--brick);
+  color: var(--white);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 0.2rem 0.6rem;
+  margin-bottom: 0.5rem;
+}
+.ex-visual-desc {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--ink);
+}
+.appeal-slide.dark .ex-visual-desc { color: rgba(255,255,255,0.6); }
+
+/* --- VIDEO EMBED & EMERGENCY LINK STYLES --- */
+.video-embed-section {
+  margin-top: 3rem;
+  border-top: 2px solid var(--brick);
+  padding-top: 2rem;
+}
+.video-embed-placeholder {
+  background: rgba(0,0,0,0.03);
+  border: 2px dashed var(--mid);
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--mid);
+  font-size: 0.8rem;
+  margin-top: 1rem;
+}
+.appeal-slide.dark .video-embed-placeholder {
+  background: rgba(255,255,255,0.03);
+  border-color: rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.5);
+}
+.video-embed-placeholder iframe {
+  width: 100%;
+  height: 315px;
+  border: 0;
+}
+.emergency-link-box {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: rgba(0,0,0,0.03);
+  border-left: 3px solid var(--brick);
+  font-size: 0.75rem;
+  word-break: break-all;
+}
+.emergency-link-box p {
+  margin-bottom: 0.25rem;
+  color: var(--mid);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.emergency-link-box a {
+  color: var(--brick);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.appeal-slide.dark .emergency-link-box {
+  background: rgba(255,255,255,0.03);
+  border-left-color: var(--brick);
+}
+.appeal-slide.dark .emergency-link-box p {
+  color: rgba(255,255,255,0.5);
+}
+.appeal-slide.dark .emergency-link-box a {
+  color: #e8a070;
+}
+
+/* --- SLIDE 8: CONCLUSION --- */
+#s8 { background: var(--cream); }
+.conclusion-text {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--ink);
+  max-width: 720px;
+}
+
+/* --- SLIDE 9: SOURCES --- */
+#s9 {
+  background: var(--navy);
+  color: var(--white);
+}
+.sources-list {
+  list-style: none;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin-top: 2.5rem;
+}
+.sources-list li {
+  padding: 1.2rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.7);
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 1rem;
+}
+.src-cat {
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--brick);
+  padding-top: 0.15rem;
+}
+.sources-list a { color: rgba(255,255,255,0.85); }
+
+/* NAV (print helper) */
+nav {
+  position: fixed; top:0; left:0; right:0; z-index:200;
+  background: rgba(15,31,61,0.97);
+  backdrop-filter: blur(8px);
+  height: 50px;
+  display: flex; align-items: center;
+  padding: 0 2rem;
+  gap: 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+nav a {
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 0 0.9rem;
+  line-height: 50px;
+  transition: color 0.15s;
+  border-right: 1px solid rgba(255,255,255,0.06);
+}
+nav a:first-child { border-left: 1px solid rgba(255,255,255,0.06); }
+nav a:hover { color: #e8a070; }
+nav .site-id {
+  margin-right: auto;
+  margin-left: 0;
+  color: rgba(255,255,255,0.3);
+  font-size: 0.58rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  border: none !important;
+  padding-left: 0 !important;
+}
+
+body { padding-top: 50px; }
+
+@media (max-width: 700px) {
+  nav { display: none; }
+  body { padding-top: 0; }
+  .example-row { grid-template-columns: 1fr; }
+  .ex-lyric { border-right: none; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 1rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="site-id">The Angel | Rhet. Analysis</span>
+  <a href="#s1">Cover</a>
+  <a href="#s1-toc">Contents</a>
+  <a href="#s2">Background</a>
+  <a href="#s3">Thesis</a>
+  <a href="#s4">Lyrics: Logos</a>
+  <a href="#s5">Lyrics: Pathos</a>
+  <a href="#s6">Video: Logos</a>
+  <a href="#s7">Video: Pathos</a>
+  <a href="#s8">Conclusion</a>
+  <a href="#s9">Sources</a>
+</nav>
+
+<!-- SLIDE 1 | FULL SCREEN COVER -->
+<section class="slide cover-fullscreen" id="s1">
+  <div class="cover-background" style="background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.ZMaGHQ53NYmEx0YXelXQdgHaFj%3Fpid%3DApi&f=1&ipt=3cbfde1eb79c3c5e8fd1a7bde834780db574288e963bdd98afc2f53786729fe2&ipo=images'); background-size: cover; background-position: center;">
+    <div class="cover-overlay"></div>
+    <div class="cover-content">
+      <span class="label" style="color:rgba(255,255,255,0.7);">Rhetorical Analysis | Multimodal Composition</span>
+      <h1 class="cover-song-title">The Angel</h1>
+      <p class="cover-song-sub">North London Forever</p>
+      <p class="cover-artist">Louis Dunford &nbsp;|&nbsp; 2022</p>
+      <div class="cover-links">
+        <div class="cover-link-item">Lyrics: <a href="https://genius.com/Louis-dunford-the-angel-north-london-forever-lyrics" target="_blank">genius.com</a></div>
+        <div class="cover-link-item">Video: <a href="https://youtu.be/wjCJv4W4kvw" target="_blank">youtu.be/wjCJv4W4kvw</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 1b | TABLE OF CONTENTS -->
+<section class="slide" id="s1-toc">
+  <div class="slide-inner">
+    <span class="label">Navigation</span>
+    <h2 class="section-title">Contents</h2>
+    <div style="height: 2rem;"></div>
+    <ul class="cover-nav-list">
+      <li><a href="#s2">Background &amp; SOAPSTone <span class="arrow">→</span></a></li>
+      <li><a href="#s3">Thesis <span class="arrow">→</span></a></li>
+      <li><a href="#s4">Lyrics: Logos <span class="arrow">→</span></a></li>
+      <li><a href="#s5">Lyrics: Pathos <span class="arrow">→</span></a></li>
+      <li><a href="#s6">Video: Logos <span class="arrow">→</span></a></li>
+      <li><a href="#s7">Video: Pathos <span class="arrow">→</span></a></li>
+      <li><a href="#s8">Conclusion <span class="arrow">→</span></a></li>
+      <li><a href="#s9">Sources <span class="arrow">→</span></a></li>
+    </ul>
+  </div>
+  <span class="page-num">01</span>
+</section>
+
+<!-- SLIDE 2 | BACKGROUND & SOAPSTONE -->
+<section class="slide" id="s2">
+  <div class="slide-inner">
+    <span class="label">Introduction</span>
+    <h2 class="section-title">Background<br>&amp; SOAPSTone</h2>
+
+    <table class="soap-table">
+      <tr>
+        <td class="soap-letter-cell">S</td>
+        <td class="soap-answer-cell">
+          <strong>Speaker</strong>
+          Louis Dunford is speaking as himself, a working class young man born and raised in North London. He isn't playing a fictional character.
+        </td>
+      </tr>
+      <tr>
+        <td class="soap-letter-cell">O</td>
+        <td class="soap-answer-cell">
+          <strong>Occasion</strong>
+          Louis Dunford wrote the song as he watched the development of his childhood city. The cobblestones were being torn up, home demolished, and skyscrapers rising in their place.
+        </td>
+      </tr>
+      <tr>
+        <td class="soap-letter-cell">A</td>
+        <td class="soap-answer-cell">
+          <strong>Audience</strong>
+          The audience are the residents and working class communities of North London. It is the people who grew up in North London who are now watching their neighborhoods being physically erased by developments.
+        </td>
+      </tr>
+      <tr>
+        <td class="soap-letter-cell">P</td>
+        <td class="soap-answer-cell">
+          <strong>Purpose</strong>
+          Dunford is trying to persuade his audience, the people of working-class North London, that their identity, history, and spirit are permanent and can't be removed like the buildings that have been.
+        </td>
+      </tr>
+      <tr>
+        <td class="soap-letter-cell">S</td>
+        <td class="soap-answer-cell">
+          <strong>Subject</strong>
+          Place based identity and loyalty. Working class community life in North London. Development and the erosion of cultural history. The tension between the changing physical landscape and the enduring people.
+        </td>
+      </tr>
+      <tr>
+        <td class="soap-letter-cell" style="font-size:0.8rem; letter-spacing:0.05em;">Tone</td>
+        <td class="soap-answer-cell">
+          <strong>Tone</strong>
+          Nostalgic, proud, gritty, and almost defiant with small hints of grief and humor. The tone is overall warm and affectionate toward the community but kind of sorrowful about what is being lost.
+        </td>
+      </tr>
+    </table>
+  </div>
+  <span class="page-num">02</span>
+</section>
+
+<!-- SLIDE 3 | THESIS -->
+<section class="slide" id="s3">
+  <div class="slide-inner">
+    <span class="label" style="color:rgba(255,255,255,0.4);">Argument</span>
+    <h2 class="section-title" style="color:var(--white);">Thesis</h2>
+    <div class="thesis-box">
+      <p class="thesis-text">
+        Louis Dunford acting as the speaker attempts to tell
+        the long-time residents and working-class of North London, mainly those who are watching their neighborhoods be physically erased
+        that
+        their identity, community bonds, and shared spirit are permanent and can't be demolished along with the buildings.
+        They use the rhetorical appeals in the lyrics and the rhetorical appeals
+        in the video to get this message across. After analyzing the lyrics and video, it appears that their use of appeals is
+        <span class="thesis-em">effective</span> in convincing their intended audience.
+      </p>
+    </div>
+  </div>
+  <span class="page-num" style="color:rgba(255,255,255,0.25);">03</span>
+</section>
+
+<!-- SLIDE 4 | LYRICS: LOGOS -->
+<section class="slide appeal-slide" id="s4">
+  <div class="slide-inner">
+    <div class="appeal-header">
+      <div class="appeal-big-letter">L</div>
+      <div class="appeal-title-block">
+        <h2>Lyrics | First Appeal</h2>
+        <h1>Logos</h1>
+      </div>
+    </div>
+
+    <div class="examples-grid">
+      <div class="example-row">
+        <div class="ex-num">Example 01</div>
+        <div class="ex-lyric">
+          <blockquote>"The manor might be changing, but the people still remain" / "but the people always last"</blockquote>
+          <p style="font-size:0.65rem;color:var(--mid);margin-top:0.5rem;">End of Verse 1 and Verse 2</p>
+        </div>
+        <div class="ex-analysis">
+          <span class="alabel">Analysis</span>
+          <p>This is kind of the backbone of the whole song. The argument is this: the physical environment is inevitably changing, but the people who make up its community are more durable than the buildings.</p>
+        </div>
+      </div>
+      <div class="example-row">
+        <div class="ex-num">Example 02</div>
+        <div class="ex-lyric">
+          <blockquote>"From the Cally to The Cross… The Thornhill to The Hemmy… Arthur's cafe… The Morland and Popham that still stand"</blockquote>
+        </div>
+        <div class="ex-analysis">
+          <span class="alabel">Analysis</span>
+          <p>The use of real locations here is logos. By rooting his statement in specific places, Dunford presents evidence to support his statement of devotion towards North London.</p>
+        </div>
+      </div>
+      <div class="example-row">
+        <div class="ex-num">Example 03</div>
+        <div class="ex-lyric">
+          <blockquote>"I see them ripping up the cobbles, and tearing down our childhood homes / I see the architecture changing, watch the history disappear"</blockquote>
+        </div>
+        <div class="ex-analysis">
+          <span class="alabel">Analysis</span>
+          <p>This is a cause and effect argument. Physical changes lead to cultural erosion. Dunford establishes the threat here, when the buildings go, the history they showed leaves too.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <span class="page-num">04</span>
+</section>
+
+<!-- SLIDE 5 | LYRICS: PATHOS -->
+<section class="slide appeal-slide dark" id="s5">
+  <div class="slide-inner">
+    <div class="appeal-header">
+      <div class="appeal-big-letter">P</div>
+      <div class="appeal-title-block">
+        <h2>Lyrics | Second Appeal</h2>
+        <h1>Pathos</h1>
+      </div>
+    </div>
+
+    <div class="examples-grid">
+      <div class="example-row">
+        <div class="ex-num">Example 01</div>
+        <div class="ex-lyric">
+          <blockquote>"My blood will forever / Run through the stone"</blockquote>
+        </div>
+        <div class="ex-analysis">
+          <span class="alabel">Analysis</span>
+          <p>This is the most emotional line of the song. His blood signifies family, sacrifice, life, and death, all in one. This line is pretty much Dunford saying "I belong to you".</p>
+        </div>
+      </div>
+      <div class="example-row">
+        <div class="ex-num">Example 02</div>
+        <div class="ex-lyric">
+          <blockquote>"It's in the single mothers juggling a baby and a job / in every single brother struggling that wound up in the dock"</blockquote>
+        </div>
+        <div class="ex-analysis">
+          <span class="alabel">Analysis</span>
+          <p>These lines are designed to show the people who are most vulnerable to the change that are taking place. It is meant to show how the walls being teared down lead to lives being teared down as well.</p>
+        </div>
+      </div>
+      <div class="example-row">
+        <div class="ex-num">Example 03</div>
+        <div class="ex-lyric">
+          <blockquote>"North London forever / Whatever the weather / These streets are our own / And my heart will leave you never"</blockquote>
+          <p style="font-size:0.65rem;color:var(--mid);margin-top:0.5rem;">Chorus</p>
+        </div>
+        <div class="ex-analysis">
+          <span class="alabel">Analysis</span>
+          <p>The chorus is an emotional vow. "Whatever the weather" means no matter what condition North London is in, he will remain loyal to it. "My heart will leave you never" signifies love towards his home that will never go elsewhere.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <span class="page-num" style="color:rgba(255,255,255,0.25);">05</span>
+</section>
+
+<!-- SLIDE 6 | VIDEO: LOGOS -->
+<section class="slide appeal-slide" id="s6">
+  <div class="slide-inner">
+    <div class="appeal-header">
+      <div class="appeal-big-letter">L</div>
+      <div class="appeal-title-block">
+        <h2>Music Video | First Appeal</h2>
+        <h1>Logos</h1>
+      </div>
+    </div>
+    <p style="font-size:0.8rem;color:var(--mid);margin-bottom:2rem;">Video: <a href="https://youtu.be/wjCJv4W4kvw" target="_blank" style="color:var(--brick);">youtu.be/wjCJv4W4kvw</a></p>
+
+    <div class="examples-grid">
+      <div class="example-row">
+        <div class="ex-num">Example 01</div>
+        <div class="ex-lyric">
+          <span class="timestamp">~0:25 – 1:00</span>
+          <p class="ex-visual-desc">Opening shots of North London streets, market stalls, brick estates, and people going through their daily life.</p>
+        </div>
+        <div class="ex-analysis">
+          <span class="alabel">Analysis</span>
+          <p>I think the most powerful logos in this video is just showing the people who are a part of the community that Dunford is talking about. The video provides evidence of the effects that are described in the lyrics.</p>
+        </div>
+      </div>
+      <div class="example-row">
+        <div class="ex-num">Example 02</div>
+        <div class="ex-lyric">
+          <span class="timestamp">~0:25 – 2:00</span>
+          <p class="ex-visual-desc">Contrasting shots of old brick buildings and rising skyscrapers.</p>
+        </div>
+        <div class="ex-analysis">
+          <span class="alabel">Analysis</span>
+          <p>The contrast between the old and the new is highlighted in these frames. The audience can see for themselves the physical evidence Dunford describes in his lyrics.</p>
+        </div>
+      </div>
+      <div class="example-row">
+        <div class="ex-num">Example 03</div>
+        <div class="ex-lyric">
+          <span class="timestamp">~2:30 – 3:15</span>
+          <p class="ex-visual-desc">Shots of community members of multiple generations shown in the same streets as the new developments.</p>
+        </div>
+        <div class="ex-analysis">
+          <span class="alabel">Analysis</span>
+          <p>These shots are evidence of the song's main point: "The manor might be changing, but the people still remain".</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="video-embed-section">
+      <h3 style="font-size:0.8rem; font-weight:700; letter-spacing:0.2em; color:var(--brick); margin-bottom:0.5rem;">VOICEOVER ANALYSIS (LOGOS)</h3>
+      <div class="video-embed-placeholder">
+        <iframe src="https://isd492-my.sharepoint.com/personal/407580_austin_k12_mn_us/_layouts/15/embed.aspx?UniqueId=9d4b002e-637c-4972-a1e4-52586103310c&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="1280" height="720" frameborder="0" scrolling="no" allowfullscreen title="Recording-20260418_172300.webm"></iframe>
+      </div>
+      <div class="emergency-link-box">
+        <p>Emergency Link (if embed fails)</p>
+        <a href="https://isd492-my.sharepoint.com/:v:/g/personal/407580_austin_k12_mn_us/IQAuAEudfGNySaHkUlhhAzEMAWqv4tyQgerUbtZ2L0rjwjE?e=QgjQ6j" target="_blank">https://isd492-my.sharepoint.com/:v:/g/personal/407580_austin_k12_mn_us/IQAuAEudfGNySaHkUlhhAzEMAWqv4tyQgerUbtZ2L0rjwjE?e=QgjQ6j</a>
+      </div>
+    </div>
+  </div>
+  <span class="page-num">06</span>
+</section>
+
+<!-- SLIDE 7 | VIDEO: PATHOS -->
+<section class="slide appeal-slide dark" id="s7">
+  <div class="slide-inner">
+    <div class="appeal-header">
+      <div class="appeal-big-letter">P</div>
+      <div class="appeal-title-block">
+        <h2>Music Video | Second Appeal</h2>
+        <h1>Pathos</h1>
+      </div>
+    </div>
+
+    <div class="examples-grid">
+      <div class="example-row">
+        <div class="ex-num">Example 01</div>
+        <div class="ex-lyric">
+          <span class="timestamp">~0:05 – 1:00</span>
+          <p class="ex-visual-desc">Warm colors used throughout even in footage of modern unchanged streets.</p>
+        </div>
+        <div class="ex-analysis">
+          <span class="alabel">Analysis</span>
+          <p>The color palette creates an emotional atmosphere of warmth. The style of imagery is used to show that everything being displayed is precious and worth remembering.</p>
+        </div>
+      </div>
+      <div class="example-row">
+        <div class="ex-num">Example 02</div>
+        <div class="ex-lyric">
+          <span class="timestamp">~1:45 – 2:20</span>
+          <p class="ex-visual-desc">Close up shots of elderly people's faces against the backdrop of the changing streets.</p>
+        </div>
+        <div class="ex-analysis">
+          <span class="alabel">Analysis</span>
+          <p>These shots highlight the changing environment. The people have aged and become less vibrant while the buildings have been toppled and become meaningless.</p>
+        </div>
+      </div>
+      <div class="example-row">
+        <div class="ex-num">Example 03</div>
+        <div class="ex-lyric">
+          <span class="timestamp">~3:00 – 3:45</span>
+          <p class="ex-visual-desc">The final shots showing community gatherings, people laughing together, children playing, neighbors talking in the street.</p>
+        </div>
+        <div class="ex-analysis">
+          <span class="alabel">Analysis</span>
+          <p>The video closes, not with despair, but with warmth. This is meant to leave the viewer with the feeling of joy and resilience for the people who still happily remain and thrive.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="video-embed-section">
+      <h3 style="font-size:0.8rem; font-weight:700; letter-spacing:0.2em; color:var(--brick); margin-bottom:0.5rem;">VOICEOVER ANALYSIS (PATHOS)</h3>
+      <div class="video-embed-placeholder">
+        <iframe src="https://isd492-my.sharepoint.com/personal/407580_austin_k12_mn_us/_layouts/15/embed.aspx?UniqueId=7abdf5cd-be95-4116-8ae4-52f58a955e27&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="1280" height="720" frameborder="0" scrolling="no" allowfullscreen title="Recording-20260418_173128.webm"></iframe>
+      </div>
+      <div class="emergency-link-box">
+        <p>Emergency Link (if embed fails)</p>
+        <a href="https://isd492-my.sharepoint.com/:v:/g/personal/407580_austin_k12_mn_us/IQDN9b16lb4WQYrkUvWKlV4nAR2IG7YwzxH_MyestfW1tEE?e=a80ACy" target="_blank">https://isd492-my.sharepoint.com/:v:/g/personal/407580_austin_k12_mn_us/IQDN9b16lb4WQYrkUvWKlV4nAR2IG7YwzxH_MyestfW1tEE?e=a80ACy</a>
+      </div>
+    </div>
+  </div>
+  <span class="page-num" style="color:rgba(255,255,255,0.25);">07</span>
+</section>
+
+<!-- SLIDE 8 | CONCLUSION -->
+<section class="slide" id="s8">
+  <div class="slide-inner">
+    <span class="label">Final Thoughts</span>
+    <h2 class="section-title">Conclusion</h2>
+    <div style="height:2rem;"></div>
+    <p class="conclusion-text">
+      In "The Angel (North London Forever)," Louis Dunford serves as the speaker, speaking as himself, a working-class young man from North London,
+      directly to the residents and working-class communities of North London who are watching their neighborhoods be physically erased by development.
+      The purpose of the song is to persuade his audience that their identity, history, and spirit are permanent and can't be removed like the buildings
+      that have been. Through both logos and pathos in the lyrics, and logos and pathos in the video, Dunford effectively builds both a rational case 
+      and an emotional one. The real locations and cause-and-effect arguments give the song its foundation, while the emotional vows of the chorus
+      give it its heart. In analyzing both the lyrics and the video, it appears that the use of appeals is 
+      effective in convincing the intended audience.
+    </p>
+  </div>
+  <span class="page-num">08</span>
+</section>
+
+<!-- SLIDE 9 | SOURCES -->
+<section class="slide" id="s9">
+  <div class="slide-inner">
+    <span class="label" style="color:rgba(255,255,255,0.4);">References</span>
+    <h2 class="section-title" style="color:var(--white);">Links <br>&amp; Works Cited</h2>
+    <ul class="sources-list">
+      <li>
+        <span class="src-cat">Lyrics</span>
+        <span>Dunford, Louis. "The Angel (North London Forever)." <em>Genius</em>, <a href="https://genius.com/Louis-dunford-the-angel-north-london-forever-lyrics" target="_blank">genius.com/Louis-dunford-the-angel-north-london-forever-lyrics</a></span>
+      </li>
+      <li>
+        <span class="src-cat">Video</span>
+        <span>Dunford, Louis. <em>The Angel (North London Forever)</em> [Music Video]. YouTube, 25 Feb. 2022, <a href="https://youtu.be/wjCJv4W4kvw" target="_blank">youtu.be/wjCJv4W4kvw</a></span>
+      </li>
+      <li>
+        <span class="src-cat">Article</span>
+        <span>Basso, Luana. "London's Gentrification Crisis - City News." <em>City News</em>, 27 Jan. 2026, <a href="http://www.citylondonnews.co.uk/analysis/20260127/88871/londons-changing-neighbourhoods-how-gentrification-is-reshaping-the-city" target="_blank">www.citylondonnews.co.uk/analysis/20260127/88871/londons-changing-neighbourhoods-how-gentrification-is-reshaping-the-city</a></span>
+      </li>
+      <li>
+        <span class="src-cat">Template</span>
+        <span>"Wix.com HTML Templates" <em>Template</em>, <a href="https://www.wix.com/website/templates" target="_blank">https://www.wix.com/website/templates</a></span>
+      </li>
+    </ul>
+  </div>
+  <span class="page-num" style="color:rgba(255,255,255,0.2);">09</span>
+</section>
+
+</body>
+</html>
